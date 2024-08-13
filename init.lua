@@ -579,7 +579,23 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
+        tsserver = {
+          init_options = {
+            hostInfo = 'neovim',
+            plugins = {
+              {
+                name = '@vue/typescript-plugin',
+                location = '/opt/homebrew/lib/node_modules/@vue/typescript-plugin',
+                languages = { 'vue' },
+              },
+            },
+          },
+          filetypes = {
+            'javascript',
+            'typescript',
+            'vue',
+          },
+        },
         --
 
         lua_ls = {
