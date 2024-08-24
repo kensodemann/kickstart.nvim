@@ -605,7 +605,9 @@ require('lazy').setup({
           },
           filetypes = {
             'javascript',
+            'javascriptreact',
             'typescript',
+            'typescriptreact',
             'vue',
           },
           commands = {
